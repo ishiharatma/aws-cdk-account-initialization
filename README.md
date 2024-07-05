@@ -1,5 +1,7 @@
 # aws-cdk-account-initialization
 
+[日本語](README.ja.md) | English
+
 ![banner](banner.png)
 
 Initial account setup with AWS CDK.
@@ -21,12 +23,12 @@ cd source
 ```sh
 npm run cdk:bootstrap
 Or
-cdk bootstrap --profile elpit-<環境変数名>-setupuser --termination-protection true -c env=<環境変数名>
+cdk bootstrap --profile <project name>-<environment>-setupuser --termination-protection true -c env=<environment>
 
 ```sh
-npm run cdk:deploy:all --env=<環境変数名>
+npm run cdk:deploy:all --env=<environment>
 Or
-cdk deploy -c env=<環境変数名> --profile elpit-<環境変数名>-setupuser --version-reporting false --path-metadata false --asset-metadatafalsedeploy
+cdk deploy -c env=<environment> --profile <project name>-<environment>-setupuser --version-reporting false --path-metadata false --asset-metadatafalsedeploy
 ```
 
 ## Terminate
@@ -34,5 +36,9 @@ cdk deploy -c env=<環境変数名> --profile elpit-<環境変数名>-setupuser 
 ```sh
 npm run cdk:destory
 or
-cdk destroy -c env=<環境変数名> --profile elpit-<環境変数名>-setupuser
+cdk destroy -c env=<environment> --profile <project name>-<environment>-setupuser
 ```
+
+## License
+
+This project is released under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
